@@ -241,28 +241,58 @@ const tools = ["Figma", "Maze", "Miro", "Notion", "Google Analytics", "Hotjar"];
 
 const blogPosts = [
   {
-    title: "Cómo el design thinking transformó mi proceso creativo",
-    date: "Junio 2025",
-    tag: "Proceso",
+    title: "Cómo diseñé una IA que habla como persona: el caso Nalia",
+    date: "Julio 2025",
+    tag: "Inteligencia Artificial",
     excerpt:
-      "Después de 3 años aplicando design thinking en proyectos reales, estas son las lecciones que nadie te cuenta en los cursos.",
-    readTime: "5 min",
+      "Diseñar un agente de IA no es solo definir flujos. Es construir una personalidad. Te cuento cómo creé la identidad conversacional de Nalia, el agente de seguros que entiende, decide y recupera — y qué aprendí sobre Agent Experience en el proceso.",
+    readTime: "7 min",
+    color: "#AA00FF",
   },
   {
-    title: "Diseñando para la moda: lo que aprendí con Minds",
-    date: "Mayo 2025",
-    tag: "Caso de Estudio",
+    title: "Del puesto 21 al 9: cómo la investigación cualitativa movió un ranking universitario",
+    date: "Enero 2024",
+    tag: "Datos Cualitativos",
     excerpt:
-      "La industria de la moda tiene reglas propias. Cómo adapté mi proceso de UX a un contexto altamente visual y emocional.",
+      "Entrevistas, análisis heurístico y mapas de flujo transformaron la USS App. No fue magia — fue escuchar a Francisco, Tania y Antonia, tres perfiles reales que nos dijeron exactamente qué fallaba. El resultado habló solo.",
+    readTime: "9 min",
+    color: "#00C853",
+  },
+  {
+    title: "OCR + Design Sprint: cómo innovamos en 5 días en una app de supermercado",
+    date: "Octubre 2023",
+    tag: "Innovación",
+    excerpt:
+      "Cuando Cencosud necesitaba una solución para fotografiar recetas y convertirlas en carritos de compra, usamos Design Sprint para pasar de problema a prototipo aprobado en tiempo récord. Aquí el proceso completo.",
     readTime: "8 min",
+    color: "#FF1744",
   },
   {
-    title: "Sistemas de diseño: el trabajo invisible que lo cambia todo",
-    date: "Abril 2025",
-    tag: "Design Systems",
+    title: "Por qué los frameworks ágiles no sirven si no tienes datos de usuario",
+    date: "Agosto 2023",
+    tag: "Frameworks Ágiles",
     excerpt:
-      "Un design system bien construido no es un lujo. Es la diferencia entre escalar o romperse. Lo que he aprendido construyendo los míos.",
+      "Scrum, Kanban, Design Sprint — todos son poderosos. Pero ninguno reemplaza entender quién usa tu producto y por qué. Mi experiencia combinando metodologías ágiles con UX Research en proyectos reales de fintech y retail.",
     readTime: "6 min",
+    color: "#AA00FF",
+  },
+  {
+    title: "Construir productos sostenidos en datos: el mix cualitativo-cuantitativo que uso",
+    date: "Mayo 2023",
+    tag: "Datos & Producto",
+    excerpt:
+      "Google Analytics me dice qué hacen los usuarios. Las entrevistas me dicen por qué. Hotjar me muestra dónde se pierden. Cuando combino las tres fuentes, dejo de adivinar y empiezo a diseñar con evidencia. Mi stack y metodología.",
+    readTime: "10 min",
+    color: "#00C853",
+  },
+  {
+    title: "Agent Experience: el nuevo campo de diseño que nadie está hablando (todavía)",
+    date: "Julio 2025",
+    tag: "Inteligencia Artificial",
+    excerpt:
+      "UX fue el diseño de interfaces. CX fue el diseño de experiencias. AX — Agent Experience — es el diseño de agentes que actúan por nosotros. Una disciplina emergente que une diseño conversacional, ética de IA y psicología del vínculo.",
+    readTime: "8 min",
+    color: "#FF1744",
   },
 ];
 
@@ -768,17 +798,22 @@ export default function App() {
             <RevealSection key={i}>
               <article
                 className="blog-card"
-                style={{ transitionDelay: `${i * 0.1}s` }}
+                style={{ transitionDelay: `${i * 0.08}s` }}
               >
                 <div className="blog-card-header">
-                  <span className="blog-tag">{post.tag}</span>
+                  <span
+                    className="blog-tag"
+                    style={{ background: `${post.color}22`, color: post.color, border: `1px solid ${post.color}44` }}
+                  >
+                    {post.tag}
+                  </span>
                   <span className="blog-read-time">{post.readTime} lectura</span>
                 </div>
                 <h3 className="blog-title">{post.title}</h3>
                 <p className="blog-excerpt">{post.excerpt}</p>
                 <div className="blog-footer">
                   <span className="blog-date">{post.date}</span>
-                  <button className="blog-link">Leer más →</button>
+                  <button className="blog-link" style={{ color: post.color }}>Leer más →</button>
                 </div>
               </article>
             </RevealSection>
