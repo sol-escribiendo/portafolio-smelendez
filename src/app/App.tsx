@@ -711,6 +711,23 @@ export default function App() {
           <RevealSection className="about-text-col">
             <span className="section-eyebrow">Quién soy</span>
             <h2 className="section-title">Sobre mí</h2>
+
+            {/* Foto de perfil */}
+            <div className="profile-photo-wrapper">
+              <div className="profile-photo-placeholder">
+                <div className="profile-photo-inner">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
+                  </svg>
+                  <span>Foto de perfil próximamente</span>
+                </div>
+              </div>
+              <div className="profile-photo-badge">
+                <span>Product Designer</span>
+                <span className="profile-location">📍 Concón, Chile</span>
+              </div>
+            </div>
             <p className="about-text">
               Diseñadora gráfica especializada en UX y diseño de productos digitales, con base en Concón, Chile. Me enfoco en liderar proyectos desde la investigación hasta la implementación, integrando estrategias de contenido, métodos de research cualitativo y cuantitativo, y tecnologías emergentes como la inteligencia artificial.
             </p>
