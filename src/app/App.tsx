@@ -284,7 +284,7 @@ export default function App() {
         <div className="hero-left">
           <div>
             <div className="hero-eyebrow">Product Designer · Concón, Chile</div>
-            <h1 className="hero-title">Diseño<br/>que<br/><em>mueve</em><br/>personas.</h1>
+            <h1 className="hero-title">Diseño que<br/><em>mueve</em><br/>personas.</h1>
             <p className="hero-subtitle">UX Research · IA aplicada · Design Systems. Creo experiencias digitales desde la evidencia, con foco en las personas.</p>
             <div className="hero-actions">
               <button className="btn-primary" onClick={() => scrollTo("proyectos")}>Ver proyectos →</button>
