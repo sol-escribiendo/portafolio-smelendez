@@ -732,6 +732,10 @@ a { cursor: none; }
   .about-grid { grid-template-columns: 1fr; gap: 48px; }
 }
 
+.about-text-col .section-title {
+  margin-bottom: 28px;
+}
+
 .about-text {
   font-size: 1.0625rem;
   color: var(--ink-soft);
