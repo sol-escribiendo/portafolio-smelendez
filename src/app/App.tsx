@@ -152,7 +152,7 @@ const skills = [
 const processSteps = [
   {
     num: "01",
-    title: "Discover",
+    title: "Descubre",
     desc: "Entrevistas con usuarios, análisis competitivo y definición del problema real. Nunca diseño sin entender primero.",
     icon: "🔍",
   },
@@ -164,25 +164,25 @@ const processSteps = [
   },
   {
     num: "03",
-    title: "Ideate",
+    title: "Idea",
     desc: "Sketches, wireframes y exploración de conceptos. Muchas ideas rápidas antes de comprometerse con una dirección.",
     icon: "💡",
   },
   {
     num: "04",
-    title: "Prototype",
+    title: "Prototipa",
     desc: "Prototipos interactivos en Figma que simulan la experiencia real. Del lo-fi al hi-fi según el momento.",
     icon: "⚡",
   },
   {
     num: "05",
-    title: "Test",
+    title: "Testea",
     desc: "Pruebas de usabilidad con usuarios reales. Itero basado en evidencia, no en opiniones.",
     icon: "🧪",
   },
   {
     num: "06",
-    title: "Deliver",
+    title: "Entrega",
     desc: "Handoff impecable al equipo de desarrollo. Design specs, tokens y acompañamiento en implementación.",
     icon: "🚀",
   },
@@ -192,35 +192,35 @@ const experience = [
   {
     period: "Jul – Ago 2025",
     role: "Product Designer (AX)",
-    company: "Natali Mercado",
+    company: "Seguros · Insurtech",
     desc: "Diseño de agente de IA para gestión de seguros. Discovery, branding, UX/UI conversacional y estrategia de producto para un agente con identidad propia, cercano y empático.",
     highlight: "Agent Experience · IA aplicada · UX Writing",
   },
   {
     period: "Ene – Mar 2025",
     role: "Product Designer",
-    company: "CleverIT Group",
-    desc: "Lideré equipos multidisciplinarios en diseño de experiencias digitales para Cencosud, AFP Capital (SURA) y Universidad San Sebastián. UX Research, prototipado y validación con Figma, Miro y frameworks ágiles.",
-    highlight: "Cencosud · AFP Capital · U. San Sebastián",
+    company: "Fintech · Retail · Educación",
+    desc: "Lideré equipos multidisciplinarios en diseño de experiencias digitales para clientes de los rubros financiero, retail y educación superior. UX Research, prototipado y validación con Figma, Miro y frameworks ágiles.",
+    highlight: "Fintech · Retail · Educación Superior",
   },
   {
     period: "Ene – Mar 2025",
     role: "Product Designer",
-    company: "AFP Capital (SURA)",
-    desc: "Lideré el diseño del MVP de herramienta de traspasos previsionales (VRO), enfocada en autogestión sin necesidad de ejecutivos. User flows, wireframes y prototipado en alta calidad.",
+    company: "Fintech · Previsión",
+    desc: "Lideré el diseño del MVP de herramienta de traspasos previsionales, enfocada en autogestión sin necesidad de ejecutivos. User flows, wireframes y prototipado en alta calidad.",
     highlight: "MVP · Fintech · Autogestión",
   },
   {
     period: "Jul 2023 – May 2024",
     role: "UX Lead",
-    company: "Cencosud (Team Wizard)",
+    company: "Ecommerce · Retail",
     desc: "Célula de innovación en ecommerce y retail. Lideré mejoras estratégicas en UX y comunicación aplicando Design Sprint e IA para optimizar procesos y experiencias digitales.",
     highlight: "Ecommerce · Design Sprint · IA",
   },
   {
     period: "Ago 2022 – Ene 2023",
     role: "User Researcher",
-    company: "Universidad San Sebastián (USS App)",
+    company: "Educación Superior",
     desc: "Lideré la investigación de usuarios en el rediseño de la app institucional. El trabajo impulsó a la universidad del puesto 21 al 9 en el ranking nacional.",
     highlight: "★ Del puesto 21 al 9 en ranking nacional",
   },
@@ -302,15 +302,110 @@ function RevealSection({
   );
 }
 
+function ProjectDetail({
+  project,
+  onClose,
+}: {
+  project: (typeof projects)[0];
+  onClose: () => void;
+}) {
+  const [galleryIndex, setGalleryIndex] = useState(0);
+
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    const handleKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
+    window.addEventListener("keydown", handleKey);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", handleKey);
+    };
+  }, [onClose]);
+
+  return (
+    <div className="project-detail-overlay" onClick={onClose}>
+      <div
+        className="project-detail-panel"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button className="detail-close" onClick={onClose} aria-label="Cerrar">✕</button>
+
+        <div className="detail-hero">
+          <img src={project.imageUrl} alt={project.name} className="detail-hero-img" />
+          <div className="detail-hero-overlay" style={{ background: `${project.color}CC` }}>
+            <div className="detail-tags">
+              {project.tags.map((tag) => (
+                <span key={tag} className="tag" style={{ background: project.accentColor, color: "#000" }}>{tag}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="detail-content">
+          <div className="detail-header">
+            <div>
+              <span className="project-category">{project.category}</span>
+              <h2 className="detail-title">{project.name}</h2>
+            </div>
+            <span className="project-year">{project.year}</span>
+          </div>
+
+          <p className="detail-desc">{project.description}</p>
+
+          {project.impact && (
+            <div className="project-impact">{project.impact}</div>
+          )}
+
+          <h3 className="detail-section-title">Proceso de diseño</h3>
+          <div className="detail-process">
+            {project.process.map((step, i) => (
+              <div key={i} className="detail-process-item">
+                <span className="process-num">0{i + 1}</span>
+                <span>{step}</span>
+              </div>
+            ))}
+          </div>
+
+          {project.gallery && project.gallery.length > 0 && (
+            <>
+              <h3 className="detail-section-title">Galería</h3>
+              <div className="project-gallery">
+                <div className="gallery-main">
+                  <img
+                    src={project.gallery[galleryIndex].src}
+                    alt={project.gallery[galleryIndex].label}
+                    className="gallery-img"
+                  />
+                  <span className="gallery-label">{project.gallery[galleryIndex].label}</span>
+                </div>
+                <div className="gallery-thumbs">
+                  {project.gallery.map((item, i) => (
+                    <button
+                      key={i}
+                      className={`gallery-thumb ${i === galleryIndex ? "active" : ""}`}
+                      onClick={() => setGalleryIndex(i)}
+                    >
+                      <img src={item.src} alt={item.label} />
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function ProjectCard({
   project,
   index,
+  onOpen,
 }: {
   project: (typeof projects)[0];
   index: number;
+  onOpen: () => void;
 }) {
-  const [expanded, setExpanded] = useState(false);
-  const [galleryIndex, setGalleryIndex] = useState(0);
   const { ref, visible } = useScrollReveal();
 
   return (
@@ -319,7 +414,7 @@ function ProjectCard({
       className={`project-card ${visible ? "revealed" : ""}`}
       style={{ transitionDelay: `${index * 0.1}s` }}
     >
-      <div className="project-image-wrapper">
+      <div className="project-image-wrapper" onClick={onOpen} style={{ cursor: "pointer" }}>
         <img
           src={project.imageUrl}
           alt={project.name}
@@ -358,49 +453,9 @@ function ProjectCard({
           <div className="project-impact">{project.impact}</div>
         )}
 
-        <button
-          className="process-toggle"
-          onClick={() => setExpanded(!expanded)}
-          aria-expanded={expanded}
-        >
-          {expanded ? "Ocultar proceso" : "Ver proceso de diseño"}
-          <span className={`toggle-icon ${expanded ? "rotated" : ""}`}>↓</span>
+        <button className="btn-open-project" onClick={onOpen}>
+          Ver proyecto completo →
         </button>
-
-        {expanded && (
-          <div className="process-list">
-            {project.process.map((step, i) => (
-              <div key={i} className="process-item">
-                <span className="process-num">0{i + 1}</span>
-                <span>{step}</span>
-              </div>
-            ))}
-
-            {project.gallery && project.gallery.length > 0 && (
-              <div className="project-gallery">
-                <div className="gallery-main">
-                  <img
-                    src={project.gallery[galleryIndex].src}
-                    alt={project.gallery[galleryIndex].label}
-                    className="gallery-img"
-                  />
-                  <span className="gallery-label">{project.gallery[galleryIndex].label}</span>
-                </div>
-                <div className="gallery-thumbs">
-                  {project.gallery.map((item, i) => (
-                    <button
-                      key={i}
-                      className={`gallery-thumb ${i === galleryIndex ? "active" : ""}`}
-                      onClick={() => setGalleryIndex(i)}
-                    >
-                      <img src={item.src} alt={item.label} />
-                    </button>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-        )}
       </div>
     </div>
   );
@@ -410,6 +465,7 @@ export default function App() {
   const [activeSection, setActiveSection] = useState("inicio");
   const [menuOpen, setMenuOpen] = useState(false);
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
+  const [selectedProject, setSelectedProject] = useState<(typeof projects)[0] | null>(null);
   const [darkMode, setDarkMode] = useState(() => {
     const saved = localStorage.getItem("darkMode");
     return saved ? saved === "true" : window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -522,7 +578,7 @@ export default function App() {
           <h1 className="hero-title">
             Solange
             <br />
-            <em>Melendez</em>
+            <em>Meléndez</em>
           </h1>
           <p className="hero-subtitle">
             Diseño experiencias digitales que conectan
@@ -554,11 +610,15 @@ export default function App() {
         </RevealSection>
 
         <div className="projects-grid">
-          {projects.map((project, i) => (
-            <ProjectCard key={project.id} project={project} index={i} />
+          {[...projects].reverse().map((project, i) => (
+            <ProjectCard key={project.id} project={project} index={i} onOpen={() => setSelectedProject(project)} />
           ))}
         </div>
       </section>
+
+      {selectedProject && (
+        <ProjectDetail project={selectedProject} onClose={() => setSelectedProject(null)} />
+      )}
 
       {/* Process */}
       <section id="proceso" className="section section-dark">
