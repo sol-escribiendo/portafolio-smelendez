@@ -66,7 +66,7 @@ img{display:block;max-width:100%}
 .hero-left{background:var(--pink);padding:64px 48px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
 .hero-left::before{content:'';position:absolute;top:-60px;left:-60px;width:240px;height:240px;background:rgba(37,80,61,0.12);border-radius:50%;pointer-events:none}
 .hero-eyebrow{font-size:0.72rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--pink-deep);margin-bottom:24px}
-.hero-title{font-family:var(--font-display);font-size:clamp(3rem,6vw,5.5rem);font-weight:700;line-height:1.08;letter-spacing:0em;color:var(--ink)}
+.hero-title{font-family:var(--font-display);font-size:clamp(3.8rem,7.5vw,7rem);font-weight:700;line-height:1.08;letter-spacing:0em;color:var(--ink)}
 .hero-title em{font-style:italic;color:var(--green);font-weight:400}
 .hero-subtitle{font-size:1rem;color:var(--pink-deep);line-height:1.65;max-width:340px;margin-top:20px;font-weight:400}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:36px}
