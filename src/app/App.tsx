@@ -7,7 +7,7 @@ const projects = [
     description: "Rediseño de la app Mi USS de la Universidad San Sebastián. Lideré la investigación con 3 perfiles de estudiantes, benchmark universitario y estrategia de experiencia digital en 3 etapas. El trabajo impulsó a la USS del puesto 21 al 9 en el ranking nacional.",
     tags: ["User Research", "UX Strategy", "App Design", "Mobile"],
     color: "#1a3a6e", accentColor: "#A8C4FF",
-    imageUrl: "/portafolio-smelendez/uss-app-3.png",
+    imageUrl: "/portafolio-smelendez/uss-app-desktop.png",
     gallery: [
       { src: "/portafolio-smelendez/uss-app-3.png", label: "Mi USS — Nueva experiencia digital" },
       { src: "/portafolio-smelendez/uss-app-4.png", label: "Clases semanales al alcance" },
