@@ -57,15 +57,11 @@ const projects = [
     description: "Célula de innovación de una empresa líder en retail para prototipar el futuro digital de sus marcas. Como UX Lead participé en múltiples iniciativas que transformaban ideas en prototipos funcionales en sprints de 2 semanas.",
     tags: ["UX Lead", "Design Sprint", "Innovación", "IA", "Ecommerce"],
     color: "#0a1628", accentColor: "#4ade80",
-    imageUrl: "/portafolio-smelendez/tw-deck-1.png",
+    imageUrl: "/portafolio-smelendez/tw-asistente-ai.png",
     gallery: [
-      { src: "/portafolio-smelendez/tw-deck-1.png", label: "Célula de innovación — Prototipando el futuro digital" },
-      { src: "/portafolio-smelendez/tw-deck-2.png", label: "Equipo multidisciplinario de innovación" },
-      { src: "/portafolio-smelendez/tw-deck-4.png", label: "Framework propio: 1 Sprint = 2 semanas" },
-      { src: "/portafolio-smelendez/tw-asistente-ai.png", label: "Iniciativa: Asistente virtual con IA para recetas" },
-      { src: "/portafolio-smelendez/tw-flow-chart.png", label: "Iniciativa: OCR — Fotografía tu lista → carro de compras" },
+      { src: "/portafolio-smelendez/tw-asistente-ai.png", label: "Iniciativa: Asistente virtual con IA" },
+      { src: "/portafolio-smelendez/tw-flow-chart.png", label: "Iniciativa: OCR — Fotografía tu lista → carro" },
       { src: "/portafolio-smelendez/tw-seguimiento-pedido.png", label: "Iniciativa: Seguimiento de pedido en tiempo real" },
-      { src: "/portafolio-smelendez/tw-deck-7.png", label: "MVP — Del prototipo al producto funcional" },
     ],
     process: [
       "Célula multidisciplinaria: UX Researcher, UX Writers, UX Designers y Devs",
