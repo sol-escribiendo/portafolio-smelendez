@@ -322,8 +322,10 @@ export default function App() {
           </div>
         </div>
         <div className="hero-right">
-          <div className="hero-photo">
-            <img src="/portafolio-smelendez/sol-foto-2.png" alt="Solange Meléndez" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center" }} />
+          <div className="hero-photo-wrap">
+            <div className="hero-photo-circle">
+              <img src="/portafolio-smelendez/sol-foto-2.png" alt="Solange Meléndez" />
+            </div>
           </div>
           <div className="hero-stats">
             <div className="stat"><div className="stat-num">6+</div><div className="stat-label">Proyectos</div></div>
