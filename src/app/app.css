@@ -76,7 +76,7 @@ img{display:block;max-width:100%}
 .btn-ghost:hover{background:var(--ink);color:var(--pink)}
 
 .hero-right{background:var(--green);padding:64px 48px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}
-.hero-photo{width:100%;flex:1;min-height:280px;border-radius:160px 160px 0 0;overflow:hidden;margin-bottom:24px;position:relative;background:rgba(245,118,165,0.15);display:flex;align-items:flex-end;justify-content:center}
+.hero-photo{width:75%;max-width:280px;min-height:220px;border-radius:140px 140px 0 0;overflow:hidden;margin:0 auto 24px;position:relative;background:rgba(245,118,165,0.15);display:flex;align-items:flex-end;justify-content:center}
 .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:top}
 .hero-photo-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:rgba(245,118,165,0.5)}
 .hero-photo-placeholder svg{opacity:0.4}
