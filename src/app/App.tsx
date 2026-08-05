@@ -53,7 +53,7 @@ const projects = [
     impact: "★ Agente con identidad propia · Entiende, decide y recupera",
   },
   {
-    id: 3, name: "Asistente IA", category: "UX Lead · IA Conversacional · Ecommerce", year: "2023–2024",
+    id: 3, name: "Asistente IA (Team Wizard)", category: "UX Lead · IA Conversacional · Ecommerce", year: "2023–2024",
     description: "Diseño de un asistente virtual inteligente para una plataforma de ecommerce retail. El chatbot permite pedir recetas, generar listas de compras automáticas y agregar productos al carro con un solo mensaje. Desarrollado en 2 semanas bajo framework Wizard Sprint.",
     tags: ["UX Lead", "IA Conversacional", "Ecommerce", "Design Sprint"],
     color: "#1a5c1a", accentColor: "#4ade80",
@@ -71,7 +71,7 @@ const projects = [
     impact: "★ Primer asistente IA en la plataforma — prototipo aprobado para desarrollo",
   },
   {
-    id: 8, name: "OCR — Fotografía tu lista", category: "UX Lead · Innovación · Ecommerce", year: "2023–2024",
+    id: 8, name: "OCR — Fotografía tu lista (Team Wizard)", category: "UX Lead · Innovación · Ecommerce", year: "2023–2024",
     description: "Feature OCR para app de supermercado: fotografía una receta o lista escrita y conviértela automáticamente en productos seleccionables para agregar al carro. Proceso completo desde research con 4 perfiles hasta prototipo hi-fi con 87% de efectividad heurística.",
     tags: ["UX Lead", "OCR", "Design Sprint", "Mobile"],
     color: "#1a5c1a", accentColor: "#A8E6A0",
@@ -89,7 +89,7 @@ const projects = [
     impact: "★ 87% efectividad heurística · Prototipo aprobado para desarrollo",
   },
   {
-    id: 9, name: "Seguimiento de pedido", category: "UX Lead · Innovación · Ecommerce", year: "2023–2024",
+    id: 9, name: "Seguimiento de pedido (Team Wizard)", category: "UX Lead · Innovación · Ecommerce", year: "2023–2024",
     description: "Feature de seguimiento en tiempo real para app de supermercado. Snackbar persistente en el home con el estado del despacho y vista de mapa con la ruta del repartidor — eliminando la incertidumbre del cliente tras confirmar su compra.",
     tags: ["UX Lead", "Design Sprint", "Mobile", "Ecommerce"],
     color: "#1a5c1a", accentColor: "#69D0AA",
