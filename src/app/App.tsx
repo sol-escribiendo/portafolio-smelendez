@@ -321,7 +321,7 @@ export default function App() {
             </div>
           </div>
         </div>
-        <div className="hero-right">
+        <div className="hero-right" style={{ justifyContent: "flex-start", paddingTop: "60px" }}>
           <div className="hero-photo-wrap">
             <div className="hero-photo-circle">
               <img src="/portafolio-smelendez/sol-foto-1.png" alt="Solange Meléndez" />
