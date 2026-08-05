@@ -324,7 +324,7 @@ export default function App() {
         <div className="hero-right">
           <div className="hero-photo-wrap">
             <div className="hero-photo-circle">
-              <img src="/portafolio-smelendez/sol-foto-2.png" alt="Solange Meléndez" />
+              <img src="/portafolio-smelendez/sol-foto-1.png" alt="Solange Meléndez" />
             </div>
           </div>
           <div className="hero-stats">
@@ -417,7 +417,7 @@ export default function App() {
         </Reveal>
         <Reveal className="about-right">
           <div className="profile-photo">
-            <img src="/portafolio-smelendez/sol-foto-1.png" alt="Solange Meléndez" style={{ width: "100%", objectFit: "cover", objectPosition: "top center" }} />
+            <img src="/portafolio-smelendez/sol-foto-2.png" alt="Solange Meléndez" style={{ width: "100%", objectFit: "cover", objectPosition: "top center" }} />
           </div>
           <div className="skills-list">
             {skills.map(s => (
