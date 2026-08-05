@@ -323,10 +323,7 @@ export default function App() {
         </div>
         <div className="hero-right">
           <div className="hero-photo">
-            <div className="hero-photo-placeholder">
-              <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-              <span>Tu foto aquí<br/>próximamente</span>
-            </div>
+            <img src="/portafolio-smelendez/sol-foto-1.png" alt="Solange Meléndez" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center" }} />
           </div>
           <div className="hero-stats">
             <div className="stat"><div className="stat-num">6+</div><div className="stat-label">Proyectos</div></div>
@@ -418,10 +415,7 @@ export default function App() {
         </Reveal>
         <Reveal className="about-right">
           <div className="profile-photo">
-            <div className="profile-photo-ph">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-              <span>Tu foto próximamente</span>
-            </div>
+            <img src="/portafolio-smelendez/sol-foto-2.png" alt="Solange Meléndez" style={{ width: "100%", objectFit: "cover", objectPosition: "top center" }} />
           </div>
           <div className="skills-list">
             {skills.map(s => (
