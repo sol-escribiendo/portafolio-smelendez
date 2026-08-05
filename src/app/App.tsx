@@ -133,48 +133,6 @@ const projects = [
     ],
     impact: "★ MVP aprobado que eliminó la necesidad de ejecutivos para realizar traspasos previsionales",
   },
-  {
-    id: 2, name: "Minds", category: "Fashion Education · Dashboard", year: "2024",
-    description: "Plataforma educativa de moda con dashboard completo para estudiantes y profesionales. Dashboard de webinars, consultorías y tendencias en una interfaz fluida.",
-    tags: ["Dashboard", "UX/UI", "Design System"],
-    color: "#E91E8C", accentColor: "#FFD700",
-    imageUrl: "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=800&q=80",
-    gallery: [],
-    process: [
-      "Mapeo de flujos de usuario para 3 tipos de perfiles",
-      "Sistema de tabs y navegación lateral optimizada",
-      "Componentes reutilizables en pink branding bold",
-      "Testing con usuarios reales de moda",
-    ],
-  },
-  {
-    id: 1, name: "Cmouse", category: "Beauty & Wellness", year: "2024",
-    description: "Landing page para plataforma de bienestar y belleza. Experiencia cálida y sofisticada que conecta emocionalmente con usuarios que buscan servicios de cuidado personal.",
-    tags: ["Landing Page", "UX Design", "Visual Design"],
-    color: "#3D5A3E", accentColor: "#F5A623",
-    imageUrl: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80",
-    gallery: [],
-    process: [
-      "Research de usuarios y competidores en el sector beauty",
-      "Arquitectura de información y wireframes de baja fidelidad",
-      "Sistema de diseño con paleta verde y dorado",
-      "Prototipo interactivo y pruebas de usabilidad",
-    ],
-  },
-  {
-    id: 4, name: "Minds Services", category: "Makeup Artist Platform", year: "2024",
-    description: "Página de servicios para maquilladores profesionales dentro del ecosistema Minds. Comunica experiencia y confianza mientras facilita la comparación de precios.",
-    tags: ["Service Design", "UI Design", "E-commerce"],
-    color: "#1A1A1A", accentColor: "#FF69B4",
-    imageUrl: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=800&q=80",
-    gallery: [],
-    process: [
-      "Card sorting con usuarios para jerarquía de información",
-      "Grid de artistas con fotografías de impacto visual",
-      "Footer tipográfico bold como firma de marca",
-      "Integración de sistema de precios transparente",
-    ],
-  },
 ];
 
 const processSteps = [
